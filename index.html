@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #8d0ec8;
+        }
+        section {
+            padding: 40px 20px; /* ปรับ padding */
+            height: 100vh; /* ให้เต็มความสูง */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 0 auto; /* ศูนย์กลาง */
+            border-radius: 10px; /* เพิ่มการโค้งมุม */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+            width: 90%; /* ปรับความกว้าง */
+            max-width: 1200px; /* กำหนดขนาดสูงสุด */
+        }
+        #landing {
+            background: url('https://images.unsplash.com/photo-1459128806329-1b61d19a0f93?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        #landing h1 {
+            font-size: 3rem; /* ปรับขนาดตัวอักษรสำหรับ h1 */
+        }
+        #landing p {
+            font-size: 1.5rem; /* ปรับขนาดตัวอักษรสำหรับ p */
+        }
+        #about {
+            background: linear-gradient(to right, #0d364a, #8ac3b5); 
+            border: 2px solid #ffffff; /* กรอบ */
+        }
+        #education {
+            background: linear-gradient(to right, #4aa17b, #9843b7); 
+            border: 2px solid #ffffff; /* กรอบ */
+        }
+        #skills {
+            background: linear-gradient(to right, #5c2d8b, #0072ff); 
+            border: 2px solid #ffffff; /* กรอบ */
+        }
+        #contact {
+            background: linear-gradient(to right, #3da7b5, #0f6951);
+            border: 2px solid #ffffff; /* กรอบ */
+        }
+        h2 {
+            color: #5ce0d8;
+            text-align: center;
+        }
+        p {
+            color: #e0e0e0;
+            text-align: center;
+            line-height: 1.8; 
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#landing">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#education">Education</a>
+    <a href="#skills">My Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="landing">
+    <h1>Welcome To My Portfolio</h1>
+    <p>This is where you can learn more about me.</p>
+</section>
+
+<section id="about">
+    <h2>ABOUT ME</h2>
+    <img src="c:\Users\Acer\Desktop\305A8DCC-45A9-4966-A2FE-B31469D7E385.jpg" alt="About Me" style="width: 100%; max-width: 150px; border-radius: 10px; margin-bottom: 20px;">
+    <p>Hello! My name is Pilaiwan Churdchu, Nickname is Chompu, and I am a first-year computer engineering student at KMUTT. I have a strong interest in software development and technology. I enjoy learning new programming languages and working on projects that challenge my skills.</p>
+</section>
+
+<section id="education">
+    <h2>EDUCATION</h2>
+    <p>Degree: Bachelor's in Computer Engineering<br>
+       Current Year: 1st Year</p>
+</section>
+
+<section id="skills">
+    <h2>SKILLS</h2>
+    <p>Programming Languages: C<br>
+       Tools: Visual Studio Code</p>
+</section>
+
+<section id="contact">
+    <h2>CONTACT</h2>
+    <p>Feel free to reach out to me at:<br>
+       Email: chompuwell@gmail.com<br>
+       Line: chompu00chompu</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Portfolio</p>
+</footer>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
